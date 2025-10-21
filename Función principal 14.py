@@ -1,0 +1,60 @@
+# Función principal
+
+# codigo principal
+
+def main():
+    print("=== SISTEMA DE PRODUCTOS ===\n")
+
+    usuario = Usuario("jhoan", "carrillo", 2314, "Calle 10", "anaL", "12345")
+    producto = Libro(50000, "El Principito", "Antoine", "Planeta", 2020, "Infantil", "Fantasía")
+    print(f"Producto creado: {producto.titulo} 📖")
+    print("")
+    servidor_inicio = Servidor()
+    procesador = Procesador()
+    indexador = Indexador()
+    editorial = Editorial("Norma", "Cra 7", "3001234567")
+    recolector = Recolector()
+    hilo = Hilo()
+
+    print("zona de Servidor ")
+    servidor_inicio.muestra_pagina()
+    servidor_inicio.envia_sugerencia()
+    servidor_inicio.envia_datos_de_compra()
+    servidor_inicio.envia_datos_de_venta()
+    print("")
+    print("zona de usuario")
+    usuario.enviar_sugerencia()
+    usuario.leer()
+    usuario.comprar()
+    usuario.vender()
+    usuario.realizar_reclamacion()
+    print("")
+    print("zona de procesador")
+    procesador.mandar_datos_de_venta()
+    procesador.mandar_articulo_online()
+    procesador.envia_sugerencia_administrador()
+    procesador.modificar_stock()
+    procesador.realizar_cobro()
+    procesador.realizar_pago()
+    procesador.actualiza_catalogo()
+    procesador.realiza_busqueda()
+    print("")
+    print("zona de producto")
+    producto.vender()
+    producto.comprar()
+    producto.ver_catalogo()
+    print("")
+    print("zona de iditorial")
+    editorial.vender()
+    print("")
+    print("zona de recolector")
+    recolector.envia_novedades()
+    print("")
+    print("zona de hilo")
+    hilo.busca_novedades()
+    print("")
+
+# zona de ejecucion
+
+if __name__ == "__main__":
+    main()
